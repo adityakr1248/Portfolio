@@ -134,8 +134,7 @@ export default function App() {
               <Linkedin size={16} /> LinkedIn
             </a>
             <a 
-              href="/Nidhi_Gupta_Resume.pdf" 
-              download="Nidhi_Gupta_Resume.pdf"
+              href="https://drive.google.com/uc?export=download&id=1wEbfXoCdnCIfpESDpRQAv3fkDeRZey8B" 
               className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-bold hover:bg-white/10 transition-all"
             >
               <FileText size={16} /> Resume
@@ -184,7 +183,7 @@ export default function App() {
                   <Linkedin size={20} /> LinkedIn
                 </a>
                 <a 
-                  href="https://drive.google.com/uc?export=download&id=1o7IwXjC2FAJb5A3VlpEQnSe049JNOCgk" 
+                  href="https://drive.google.com/uc?export=download&id=1wEbfXoCdnCIfpESDpRQAv3fkDeRZey8B" 
                   className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all"
                 >
                   <FileText size={20} /> Resume
@@ -427,7 +426,7 @@ export default function App() {
           </div>
           <div className="flex gap-6 text-neutral-500">
             <a href="https://www.linkedin.com/in/nidhi-gupta-a43652167/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://drive.google.com/uc?export=download&id=1o7IwXjC2FAJb5A3VlpEQnSe049JNOCgk" className="hover:text-white transition-colors">Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1wEbfXoCdnCIfpESDpRQAv3fkDeRZey8B" className="hover:text-white transition-colors">Resume</a>
           </div>
         </div>
       </footer>
