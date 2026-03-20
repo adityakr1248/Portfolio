@@ -40,12 +40,19 @@ const experiences = [
     period: "Jan 2021 - Present",
     highlights: [
       "Gathered and defined customer requirements to develop clear specifications for creating well-organized project plans.",
-      "Collaborated with stakeholders to understand integration end-to-end flows between systems.",
-      "Designed and developed B2B integrations using Dell Boomi AtomSphere for EDI transactions (PO, Invoice, etc.).",
+      "Collaborated with stakeholders to understand integration end-to-end flows between systems and ensure the design is based on industry's best practices.",
+      "Designed and developed B2B integrations using Dell Boomi AtomSphere for EDI transactions including Purchase Order, Dispatch Advice, Shipment Confirmation, Material Master, Invoice, etc.",
       "Led onboarding of multiple trading partners including major retailers and logistics providers.",
       "Configured secure AS2 communication including certificate management and MDN validation.",
+      "Configured and managed AS2, HTTP and SFTP communication for secure trading partner connectivity.",
       "Designed and published enterprise APIs using Boomi API Management.",
-      "Developed reusable Boomi process components and common error-handling framework."
+      "Developed REST-based integrations between end systems.",
+      "Developed reusable Boomi process components and common error-handling framework to improve integration efficiency.",
+      "Implemented automated error notification using Mail connector.",
+      "Monitored integrations using Boomi Process Reporting and Splunk B2B dashboard and proactively resolved failures.",
+      "Coordinated cross-functional teams during major retail go-live releases.",
+      "Defined integration standards and best practices across environments.",
+      "Mentored junior developers on B2B mapping and Boomi best practices."
     ]
   },
   {
@@ -54,10 +61,12 @@ const experiences = [
     period: "Apr 2018 - Dec 2020",
     highlights: [
       "Led a team of 5 members.",
-      "Build A2A end-to-end integrations using Salesforce, ServiceNow, DB, SFTP, HTTP connectors.",
+      "Build A2A end-to-end integrations using Salesforce, ServiceNow, DB, SFTP, HTTP, Web Services Service, REST Client connectors.",
       "Experience in XML, JSON, DB and Flat File profiles.",
-      "Build add-on processes for Production monitoring (PagerDuty Alert, Boomi Atom DLQ Alert).",
-      "Experience in Quality Assurance and in Code review processes."
+      "Gathered all technical requirements by connecting to the stakeholders.",
+      "Build various add-on processes to help the team with Production monitoring, e.g. building PagerDuty Alert process, Boomi Atom DLQ Alert process.",
+      "Experience in Quality Assurance and in Code review processes.",
+      "Prepared Technical, Functional and Migration documents."
     ]
   },
   {
@@ -65,10 +74,10 @@ const experiences = [
     role: "SAP PI Developer",
     period: "May 2016 - Mar 2018",
     highlights: [
-      "Studied business functions and evaluated requirements to establish operational objectives.",
-      "Created integrations between ERP systems and Salesforce systems using Salesforce, HTTP client, SOAP client, etc.",
+      "Studied business functions and evaluated requirements to establish operational objectives. Provided technical and functional recommendations based on project requirements.",
+      "Created integrations between different ERP systems and Salesforce systems using Salesforce, HTTP client, Web Server SOAP client, Oracle DB, Oracle E-Business, FTP, Mail, Boomi Atom Queue, and Web Services Server connectors.",
       "Exposed the Boomi processes with the help of Boomi API management.",
-      "Used Web Services Server connector to handle GET and POST requests."
+      "Used Web Services Server connector to GET and POST requests from the source and send the response back to the source using Return Document shape, after checking the HTTP Status Code from the target."
     ]
   },
   {
@@ -76,11 +85,26 @@ const experiences = [
     role: "System Engineer Trainee",
     period: "Nov 2015 - Apr 2016",
     highlights: [
-      "Collaborated on stages of systems development lifecycle from requirement gathering to production releases.",
+      "Collaborated on stages of systems development lifecycle from requirement gathering to production releases. Translated customer requirements into written use cases.",
       "Configured the interfaces between SAP GTS to a third-party system through JMQ.",
-      "Developed ESR objects (Namespaces, Data Types, Message Mappings) and ID objects.",
-      "Developed interfaces between SAP and HR/Delivery systems using SOAP and Proxy adapters."
+      "Developed ESR objects (e.g., Namespaces, Data Types Message Mappings, Operation Mappings, etc.) and ID objects (Communication Channels and Integrated Configurations)",
+      "Imported Software Components and Business Systems. Worked on Outbound Proxy generation and the JMS adapter. Configured the Message Queue path.",
+      "Developed interfaces (hire, terminate, update) between SAP and an HR system using SOAP and Proxy adapters.",
+      "Developed interfaces (ship, track, label and provide the rate) between SAP and a delivery system using SOAP and HTTP adapters."
     ]
+  }
+];
+
+const education = [
+  {
+    school: "Poornima College of Engineering",
+    degree: "B. Tech • Electronics And Communication Engineering",
+    period: "Jul 2011 - Jul 2015"
+  },
+  {
+    school: "St. Micheal's High School",
+    degree: "High School • Physics, Chemistry, Maths",
+    period: ""
   }
 ];
 
@@ -96,6 +120,7 @@ export default function App() {
           <div className="hidden md:flex gap-8 text-sm font-medium text-neutral-400">
             <a href="#about" className="hover:text-emerald-400 transition-colors">About</a>
             <a href="#experience" className="hover:text-emerald-400 transition-colors">Experience</a>
+            <a href="#education" className="hover:text-emerald-400 transition-colors">Education</a>
             <a href="#skills" className="hover:text-emerald-400 transition-colors">Skills</a>
             <a href="#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
           </div>
@@ -159,8 +184,7 @@ export default function App() {
                   <Linkedin size={20} /> LinkedIn
                 </a>
                 <a 
-                  href="/Nidhi_Gupta_Resume.pdf" 
-                  download="Nidhi_Gupta_Resume.pdf"
+                  href="https://drive.google.com/uc?export=download&id=1o7IwXjC2FAJb5A3VlpEQnSe049JNOCgk" 
                   className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all"
                 >
                   <FileText size={20} /> Resume
@@ -267,6 +291,41 @@ export default function App() {
           </div>
         </section>
 
+        {/* Education Section */}
+        <section id="education" className="mb-32">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-4 mb-12"
+          >
+            <h2 className="font-display text-4xl font-bold">Education</h2>
+            <div className="h-px flex-1 bg-white/10" />
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {education.map((edu, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="glass-card p-8 relative overflow-hidden group"
+              >
+                <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <GraduationCap size={80} />
+                </div>
+                <div className="relative z-10">
+                  <div className="text-emerald-500 font-mono text-sm mb-2">{edu.period}</div>
+                  <h3 className="text-xl font-bold text-white mb-1">{edu.school}</h3>
+                  <p className="text-neutral-400">{edu.degree}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Skills & Certs */}
         <section id="skills" className="mb-32 grid md:grid-cols-2 gap-12">
           <motion.div
@@ -368,7 +427,7 @@ export default function App() {
           </div>
           <div className="flex gap-6 text-neutral-500">
             <a href="https://www.linkedin.com/in/nidhi-gupta-a43652167/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="/Nidhi_Gupta_Resume.pdf" download="Nidhi_Gupta_Resume.pdf" className="hover:text-white transition-colors">Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1o7IwXjC2FAJb5A3VlpEQnSe049JNOCgk" className="hover:text-white transition-colors">Resume</a>
           </div>
         </div>
       </footer>
